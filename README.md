@@ -140,8 +140,8 @@ pip install -r requirements.txt
 6. 07_modeling.ipynb  
 
 ## Автор  
-Киселев Артём — Junior Data Analyst
-GitHub - | Telegram: @tema_kiselev
+Киселев Артём — Junior Data Analyst  
+GitHub Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
 
 
 
