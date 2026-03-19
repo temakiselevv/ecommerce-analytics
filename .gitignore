@@ -1,0 +1,28 @@
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data
+data/raw/
+*.parquet
+*.csv
+!data/cleaned/*.parquet
+!data/features/*.parquet
+
+# Models
+models/*.pkl
+models/*.joblib
+
+# Virtual env
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
