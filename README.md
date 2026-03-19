@@ -126,6 +126,14 @@ ecommerce-analytics/
 - **Машинное обучение**: scikit-learn, xgboost
 - **Дополнительно**: RFM-анализ, ABC-анализ, Feature Engineering
 
+## Данные
+Сырые данные не включены в репозиторий из-за объёма.
+
+Скачайте датасет по ссылке:  
+https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data
+
+Распакуйте архив и положите файлы в папку `data/raw/`.
+
 ## Как запустить проект
 
 ```bash
@@ -140,8 +148,8 @@ pip install -r requirements.txt
 6. 07_modeling.ipynb  
 
 ## Автор  
-Киселев Артём — Junior Data Analyst
-GitHub - | Telegram: @tema_kiselev
+Киселев Артём — Junior Data Analyst  
+GitHub Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
 
 
 
