@@ -36,23 +36,23 @@
 - Ключевой драйвер — наличие и объём стока (`stock_log`)
 
 ## Структура проекта
-ecommerce-analytics/
-├── dashboards/
-├── data/
-│   ├── cleaned/
-│   ├── features/
-│   └── raw/
-├── notebooks/
-│   ├── 01_data_overview.ipynb
-│   ├── 02_clean_amazon_sales.ipynb
-│   ├── 03_clean_stock.ipynb
-│   ├── 04_feature_engineering.ipynb
-│   ├── 05_eda.ipynb
-│   ├── 06_rfm_customer_segmentation.ipynb   
-│   └── 07_modeling.ipynb
-├── presentation.pdf -
-├── requirements.txt 
-└── README.md
+ecommerce-analytics/  
+├── dashboards/  
+├── data/  
+│   ├── cleaned/  
+│   ├── features/  
+│   └── raw/  
+├── notebooks/  
+│   ├── 01_data_overview.ipynb  
+│   ├── 02_clean_amazon_sales.ipynb  
+│   ├── 03_clean_stock.ipynb  
+│   ├── 04_feature_engineering.ipynb  
+│   ├── 05_eda.ipynb  
+│   ├── 06_rfm_customer_segmentation.ipynb    
+│   └── 07_modeling.ipynb  
+├── presentation.pdf  
+├── requirements.txt  
+└── README.md  
 
 ## Что было сделано
 
