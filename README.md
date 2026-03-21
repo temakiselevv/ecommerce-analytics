@@ -50,7 +50,7 @@ ecommerce-analytics/
 │   ├── 05_eda.ipynb  
 │   ├── 06_rfm_customer_segmentation.ipynb    
 │   └── 07_modeling.ipynb  
-├── presentation.pdf  
+├── Amazon India E-commerce Analysis presentation.pdf  
 ├── requirements.txt  
 └── README.md  
 
