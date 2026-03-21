@@ -39,7 +39,7 @@
 ecommerce-analytics/  
 ├── dashboards/                         
 ├── data/                              
-├── notebooks/  # Jupyter ноутбуки с анализом  
+├── notebooks/  
 │   ├── 01_data_overview.ipynb  
 │   ├── 02_clean_amazon_sales.ipynb  
 │   ├── 03_clean_stock.ipynb  
