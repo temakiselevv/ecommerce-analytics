@@ -149,7 +149,7 @@ pip install -r requirements.txt
 
 ## Автор  
 Киселев Артём — Junior Data Analyst  
-GitHub Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
+GitHub: Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
 
 
 
