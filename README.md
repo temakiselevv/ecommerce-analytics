@@ -37,8 +37,8 @@
 
 ## Структура проекта
 ecommerce-analytics/  
-├── dashboards/                          # скриншоты графиков и таблиц  
-├── data/                                # подготовленные датасеты (игнорируются git, кроме очищенных)  
+├── dashboards/                         
+├── data/                              
 ├── notebooks/  # Jupyter ноутбуки с анализом  
 │   ├── 01_data_overview.ipynb  
 │   ├── 02_clean_amazon_sales.ipynb  
@@ -46,8 +46,8 @@ ecommerce-analytics/
 │   ├── 04_feature_engineering.ipynb  
 │   ├── 05_eda.ipynb  
 │   ├── 06_rfm_customer_segmentation.ipynb    
-│   └── 07_modeling.ipynb 
-├── .gitignore                           # исключены тяжёлые файлы, чекпоинты Jupyter, модели и venv  
+│   └── 07_modeling.ipynb  
+├── .gitignore                           
 ├── Amazon India E-commerce Analysis presentation.pdf  
 ├── requirements.txt  
 └── README.md  
