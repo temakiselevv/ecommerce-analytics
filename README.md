@@ -1,5 +1,8 @@
 # Amazon India E-commerce Sales Analysis & Demand Forecasting
 
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
+
 **Анализ продаж Amazon India (март–июнь 2022) + предсказание спроса**
 
 Полный пет-проект, включающий EDA, RFM-сегментацию клиентов, ABC-анализ и построение модели машинного обучения.
@@ -36,12 +39,10 @@
 - Ключевой драйвер — наличие и объём стока (`stock_log`)
 
 ## Структура проекта
+```text
 ecommerce-analytics/  
-├── dashboards/  
-├── data/  
-│   ├── cleaned/  
-│   ├── features/  
-│   └── raw/  
+├── dashboards/                         
+├── data/                              
 ├── notebooks/  
 │   ├── 01_data_overview.ipynb  
 │   ├── 02_clean_amazon_sales.ipynb  
@@ -50,10 +51,11 @@ ecommerce-analytics/
 │   ├── 05_eda.ipynb  
 │   ├── 06_rfm_customer_segmentation.ipynb    
 │   └── 07_modeling.ipynb  
-├── presentation.pdf  
+├── .gitignore                           
+├── Amazon India E-commerce Analysis presentation.pdf  
 ├── requirements.txt  
 └── README.md  
-
+```
 ## Что было сделано
 
 ### 1. Data Cleaning (02_clean_amazon_sales.ipynb, 03_clean_stock.ipynb)
@@ -109,14 +111,6 @@ ecommerce-analytics/
    - Стимулировать fulfilment через Amazon
    - Оптимизировать прогнозирование спроса для снижения out-of-stock
 
-
-## Стек технологий
-
-- **Язык**: Python 3.10
-- **Анализ**: pandas, numpy
-- **Визуализация**: plotly, matplotlib, seaborn
-- **Машинное обучение**: scikit-learn, xgboost
-- **Дополнительно**: RFM-анализ, ABC-анализ, Feature Engineering
 
 ## Стек технологий
 
