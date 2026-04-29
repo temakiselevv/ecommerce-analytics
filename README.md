@@ -1,60 +1,77 @@
 # Amazon India E-commerce Sales Analysis & Demand Forecasting
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Used-success)](https://pandas.pydata.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-Used-success)](https://scikit-learn.org/)
 
-**Анализ продаж Amazon India (март–июнь 2022) + предсказание спроса**
+**Анализ продаж Amazon India + прогнозирование спроса с помощью машинного обучения**
 
-Полный пет-проект, включающий EDA, RFM-сегментацию клиентов, ABC-анализ и построение модели машинного обучения.
+Полноценный end-to-end аналитический проект: от очистки данных до RFM-сегментации клиентов и построения модели прогнозирования спроса.
 
-## Цели проекта
+---
 
-- Провести глубокий разведочный анализ продаж
-- Выявить ключевые драйверы выручки и паттерны поведения клиентов
-- Сегментировать клиентов с помощью RFM-анализа
-- Построить модель предсказания количества продаж (`qty`)
-- Сформулировать бизнес-рекомендации
+## 🎯 О проекте
 
-## Основные результаты
+Проект посвящён глубокому анализу продаж на Amazon India (март–июнь 2022) и разработке модели прогнозирования количества продаж (`qty`).
 
-### EDA
-- Общая выручка за 4 месяца: **75.4 млн INR**
-- Продано **116 479 единиц** товаров
+**Основная цель** — выявить ключевые драйверы выручки, сегментировать клиентов и построить полезную модель demand forecasting, которая поможет оптимизировать сток и продажи.
+
+### Ключевые результаты
+
+- **Общая выручка** за 4 месяца: **75.4 млн INR**
+- Продано **116 479** единиц товаров
 - Категория **Set** приносит **49.95%** всей выручки
-- Две категории (**Set** + **kurta**) обеспечивают **77.07%** оборота
-- Товары в наличии продаются на **26.6%** лучше
-- Amazon Fulfillment даёт средний чек **в 3+ раза выше**, чем Merchant
-
-### RFM-анализ клиентов
-- **Champions** (23.4% клиентов) генерируют основную долю выручки
-- **Loyal Customers** (19.4% клиентов) добавляют +8.2% выручки
-- Вместе два верхних сегмента обеспечивают **более 91%** выручки
-- 61.2% клиентов (сегменты Lost, At Risk, Hibernating и др.) приносят менее 9% выручки
-
-### Моделирование
-- Модель: RandomForestRegressor
+- **RFM-анализ**: сегменты **Champions** + **Loyal Customers** (42.8% клиентов) генерируют **91.5%** выручки
+- Модель: **RandomForestRegressor**
 - **MAE**: 5.73 шт.
 - **RMSE**: 12.87 шт.
 - **R²**: 0.1608
-- Ключевой драйвер — наличие и объём стока (`stock_log`)
 
-## Структура проекта
+**Самый важный фактор** — наличие и объём стока товара.
+
+---
+
+## 📊 Основные insights из EDA
+
+- Две категории (**Set** + **kurta**) обеспечивают **77.07%** оборота
+- Товары в наличии продаются на **26.6%** лучше
+- Amazon Fulfillment даёт средний чек **в 3+ раза выше**, чем Merchant
+- Размеры **L, XL, XXL** значительно доминируют в продажах
+- Более 61% клиентов относятся к низкоценным сегментам и приносят менее 9% выручки
+
+**Бизнес-выводы и рекомендации** находятся в презентации (`Amazon India E-commerce Analysis presentation.pdf`).
+
+---
+
+## 🛠 Технологический стек
+
+- **Язык**: Python 3.10
+- **Анализ данных**: Pandas, NumPy
+- **Визуализация**: Plotly, Matplotlib, Seaborn
+- **Машинное обучение**: Scikit-learn, RandomForestRegressor
+- **Аналитика клиентов**: RFM-анализ, ABC-анализ
+- **Дополнительно**: Feature Engineering, временные признаки
+
+---
+
+## 📁 Структура проекта
+
 ```text
-ecommerce-analytics/  
-├── dashboards/                         
-├── data/                              
-├── notebooks/  
-│   ├── 01_data_overview.ipynb  
-│   ├── 02_clean_amazon_sales.ipynb  
-│   ├── 03_clean_stock.ipynb  
-│   ├── 04_feature_engineering.ipynb  
-│   ├── 05_eda.ipynb  
-│   ├── 06_rfm_customer_segmentation.ipynb    
-│   └── 07_modeling.ipynb  
-├── .gitignore                           
-├── Amazon India E-commerce Analysis presentation.pdf  
-├── requirements.txt  
-└── README.md  
+ecommerce-analytics/
+├── data/                          # raw + processed данные
+├── notebooks/                     # Основные этапы анализа
+│   ├── 01_data_overview.ipynb
+│   ├── 02_clean_amazon_sales.ipynb
+│   ├── 03_clean_stock.ipynb
+│   ├── 04_feature_engineering.ipynb
+│   ├── 05_eda.ipynb
+│   ├── 06_rfm_customer_segmentation.ipynb
+│   └── 07_modeling.ipynb
+├── dashboards/                    # Интерактивные дашборды
+├── Amazon India E-commerce Analysis presentation.pdf
+├── requirements.txt
+└── README.md
 ```
 ## Что было сделано
 
