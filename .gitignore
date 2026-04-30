@@ -3,7 +3,8 @@
 *.ipynb_checkpoints
 
 # Data
-data/raw/
+data/raw/*
+!data/raw/.gitkeep
 *.parquet
 *.csv
 !data/cleaned/*.parquet
