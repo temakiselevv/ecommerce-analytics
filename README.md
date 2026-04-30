@@ -143,7 +143,9 @@ ecommerce-analytics/
 Скачайте датасет по ссылке:  
 https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data
 
-Распакуйте архив и положите файлы в папку `data/raw/`.
+Распакуйте архив и положите файлы `Amazon Sale Report.csv` и `Sale Report.csv` в папку `data/raw/`.
+
+> Примечание: остальные файлы не были включены в анализ из-за некачественности данных
 
 ## Как запустить проект
 
