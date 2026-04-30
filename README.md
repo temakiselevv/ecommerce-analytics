@@ -59,7 +59,9 @@
 
 ```text
 ecommerce-analytics/
+├── dashboards/                    # Интерактивные дашборды
 ├── data/                          # raw + processed данные
+├── models/                        # Сохранённые модели (joblib)
 ├── notebooks/                     # Основные этапы анализа
 │   ├── 01_data_overview.ipynb
 │   ├── 02_clean_amazon_sales.ipynb
@@ -68,60 +70,11 @@ ecommerce-analytics/
 │   ├── 05_eda.ipynb
 │   ├── 06_rfm_customer_segmentation.ipynb
 │   └── 07_modeling.ipynb
-├── dashboards/                    # Интерактивные дашборды
+├── utils/                         # Вспомогательные скрипты
 ├── Amazon India E-commerce Analysis presentation.pdf
 ├── requirements.txt
 └── README.md
 ```
-## Что было сделано
-
-### 1. Data Cleaning (02_clean_amazon_sales.ipynb, 03_clean_stock.ipynb)
-- Очистка пропусков, приведение типов, обработка дат
-- Объединение продаж и стоков
-
-### 2. Feature Engineering (04_feature_engineering.ipynb)
-- Агрегация данных по `sku` + месяц
-- Создание временных признаков (month, weekday, weekend)
-- Признаки стока (`stock_sum`, `in_stock`, `stock_log`)
-- Target encoding: `category_avg_qty`
-
-### 3. Exploratory Data Analysis (05_eda.ipynb)
-- Распределение `qty` и `revenue`
-- Динамика выручки по месяцам
-- Топ-категории и SKU
-- Примитивный ABC-анализ по SKU
-- Корреляционный анализ
-
-### 4. RFM Customer Segmentation (06_rfm_customer_segmentation.ipynb)
-- Создание прокси `CustomerID` на основе гео-данных
-- Расчёт Recency, Frequency, Monetary
-- Сегментация клиентов на 7 групп (Champions, Loyal Customers, At Risk, Lost и др.)
-- Анализ вклада каждого сегмента в выручку
-
-### 5. Demand Forecasting (07_modeling.ipynb)
-- Модель `RandomForestRegressor` для предсказания `qty`
-- Оценка качества (MAE, RMSE)
-- Feature Importance
-- Визуализация предсказаний
-
-## Ключевые insights
-
-- Топ-категория `Set` приносит 49.95% всей выручки
-- Размеры L, XL и XXL доминируют в продажах
-- 42,8% клиентов относятся к сегментам **Champions + Loyal Customers**, но дают 91,5% выручки
-- Модель прогнозирования показывает MAE = 5.73
-- Наличие стока — критически важный фактор продаж
-- Amazon Fulfillment значительно повышает средний чек.
-
-## Данные
-Сырые данные не включены в репозиторий из-за объёма.
-
-Скачайте датасет по ссылке:  
-https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data
-
-Распакуйте архив и положите файлы `Amazon Sale Report.csv` и `Sale Report.csv` в папку `data/raw/`.
-
-> Примечание: остальные файлы не были включены в анализ из-за некачественности данных
 
 ## 🚀 Как запустить проект
 
@@ -149,7 +102,14 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**4. Запустите Jupyter Notebooks последовательно:** :  
+**4. Скачайте датасет с Kaggle по ссылке:**  
+https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data
+
+Распакуйте архив и положите файлы `Amazon Sale Report.csv` и `Sale Report.csv` в папку `data/raw/`.
+
+> Примечание: остальные файлы не были включены в анализ из-за некачественности данных.
+
+**5. Запустите Jupyter Notebooks последовательно:** :  
 1. 02_clean_amazon_sales.ipynb  
 2. 03_clean_stock.ipynb  
 3. 04_feature_engineering.ipynb  
@@ -157,8 +117,35 @@ pip install -r requirements.txt
 5. 06_rfm_customer_segmentation.ipynb  
 6. 07_modeling.ipynb  
 
+## 📈 Методология
+
+- Очистка и объединение данных продаж и стоков
+- Feature Engineering (временные признаки, признаки стока, target encoding)
+- Разведочный анализ данных (EDA)
+- RFM-сегментация клиентов
+- Примитивный ABC-анализ
+- Построение модели прогнозирования спроса (qty)
+- Анализ важности признаков и бизнес-рекомендации
+
+## 📌 Ключевые особенности проекта
+
+- Полный цикл анализа: от сырых данных до бизнес-рекомендаций
+- Качественная RFM-сегментация клиентов
+- Комбинация продуктового и клиентского анализа
+- Практически применимая модель прогнозирования спроса
+- Чёткие бизнес-инсайты и рекомендации
+
+## Дополнительные материалы
+
+- Презентация — Amazon India E-commerce Analysis presentation.pdf
+- Jupyter notebooks — подробный разбор каждого этапа
+
+**Хотите увидеть проект в действии?
+Открывайте ноутбуки или презентацию — там вся ценность.
+⭐ Если проект был полезен — ставьте звезду!**
+
 ## Автор  
 Киселев Артём — Junior Data Analyst  
 GitHub: Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
 
-*Проект создан как демонстрация сильных навыков в data analysis, end-to-end ML и feature engineering.*
+*Проект создан как демонстрация навыков в анализе продаж, RFM-сегментации, feature engineering и построении моделей demand forecasting.*
