@@ -113,30 +113,6 @@ ecommerce-analytics/
 - Наличие стока — критически важный фактор продаж
 - Amazon Fulfillment значительно повышает средний чек.
 
-## Бизнес-рекомендации
-
-1. **Клиентская стратегия**:
-   - Разработать программу лояльности для сегмента **Champions** и **Loyal Customers**
-   - Запустить реактивационные кампании для **At Risk** и **Hibernating**
-   - Минимизировать маркетинговые затраты на **Lost**
-
-2. **Ассортимент**:
-   - Увеличить сток и рекламу размеров L–XXL в категории Set
-   - Сократить ассортимент категории C по ABC-анализу
-
-3. **Операционка**:
-   - Стимулировать fulfilment через Amazon
-   - Оптимизировать прогнозирование спроса для снижения out-of-stock
-
-
-## Стек технологий
-
-- **Язык**: Python 3.10
-- **Анализ**: pandas, numpy
-- **Визуализация**: plotly, matplotlib, seaborn
-- **Машинное обучение**: scikit-learn, xgboost
-- **Дополнительно**: RFM-анализ, ABC-анализ, Feature Engineering
-
 ## Данные
 Сырые данные не включены в репозиторий из-за объёма.
 
@@ -147,12 +123,33 @@ https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sal
 
 > Примечание: остальные файлы не были включены в анализ из-за некачественности данных
 
-## Как запустить проект
+## 🚀 Как запустить проект
 
-```bash
+**1. Клонируйте репозиторий**  
+```console
+git clone https://github.com/temakiselevv/ecommerce-analytics.git
+cd telco-churn-project
+```
+
+**2. Создайте и активируйте виртуальное окружение**
+```console
+py -m venv venv
+```
+```console
+# Linux/macOS
+source venv/bin/activate
+```
+```console
+# Windows
+venv\Scripts\activate
+```
+
+**3. Установите необходиые зависимости:**
+```console
 pip install -r requirements.txt
 ```
-Запуск ноутбуков в порядке:  
+
+**4. Запустите Jupyter Notebooks последовательно:** :  
 1. 02_clean_amazon_sales.ipynb  
 2. 03_clean_stock.ipynb  
 3. 04_feature_engineering.ipynb  
@@ -164,7 +161,4 @@ pip install -r requirements.txt
 Киселев Артём — Junior Data Analyst  
 GitHub: Tema Kiselev (temakiselevv) | Telegram: @tema_kiselev
 
-
-
-
-
+*Проект создан как демонстрация сильных навыков в data analysis, end-to-end ML и feature engineering.*
